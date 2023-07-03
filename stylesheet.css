@@ -1,0 +1,121 @@
+body {
+    background-image: url("https://t3.ftcdn.net/jpg/03/12/92/82/360_F_312928200_OWKaXUVYA4aJtlI1kKPyNb227zQJi1Ow.jpg");
+    background-repeat: repeat;
+    font-family: 'Mukta', sans-serif;
+    line-height: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 32px;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+nav {
+    display: flex;
+    margin-left: auto;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-buttons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-button {
+    margin-right: 10px;
+}
+
+.about-me {
+    display: flow-root;
+
+    padding: 10px;
+    background-color: #2b2b2bff;
+    color: white;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.portfolio-picture {
+    float: left;
+    margin: 0 10px 0 0;
+    width: 200px;
+}
+
+.projects {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #181A1B;
+    color: white;
+
+    /* flex: 0 0 300px 450px; */
+    padding: 10px;
+    width: 300px;
+    height: 470px;
+
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.project-card:hover > * {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.project-thumbnail {
+    width: 300px;
+}
+
+.icon {
+    width: 32px;
+}
+
+.tag {
+    margin-right: 5px;
+}
+
+.tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+.contact-list {
+    list-style: none;
+    display: flex;
+
+    justify-content: center;
+    
+    padding: 0px;
+}
+
+.contact {
+    padding-right: 20px;
+}
+
+footer {
+    background-color: #2b2b2b;
+    height: 40px;
+
+    text-align: center;
+    line-height: 40px;
+    color: #7d7d7d;
+}
