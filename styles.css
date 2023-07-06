@@ -8,7 +8,6 @@
 
     font-family: 'Poppins', sans-serif;
     line-height: 18px;
-    /* background: red; */
 }
 
 body {
@@ -21,8 +20,6 @@ header {
     top: 0;
     right: 0;
 
-    /* left: 20vw; */
-    /* right: 20vw; */
     z-index: 1000;
     width: 100%;
 
@@ -32,13 +29,6 @@ header {
     justify-content: space-between;
     padding: 20px 9%;
 
-    /* border-bottom: 2px solid transparent;
-    border-right: 2px solid transparent;
-    border-left: 2px solid transparent;
-
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; */
-
     background: #202020bc;
 }
 
@@ -47,11 +37,6 @@ header {
     font-weight: 700;
     color: white;
 }
-
-/* .content {
-    background-image: url("https://t3.ftcdn.net/jpg/03/12/92/82/360_F_312928200_OWKaXUVYA4aJtlI1kKPyNb227zQJi1Ow.jpg");
-    background-repeat: repeat;
-} */
 
 .navlist {
     display: flex;
@@ -177,7 +162,6 @@ header {
     height: 450px;
 
     margin: 10px;
-    /* margin-top: 10px; */
 
     border-radius: 10px;
 }
@@ -220,10 +204,6 @@ header {
 
 
 .contact {
-    /* border-top: solid;
-    border-bottom: solid;
-    border-color: rgb(240, 240, 240); */
-
     background: rgb(247, 247, 247);
 
     text-align: center;
