@@ -321,6 +321,7 @@ footer {
     }
 
     .about {
+        padding-top: 80px;
         grid-template-columns: 30% 70%;
     }
 }
@@ -338,6 +339,7 @@ footer {
     .about {
         padding-top: 80px;
         grid-template-columns: 40% 60%;
+        padding-bottom: 20px;
     }
 }
 
@@ -345,4 +347,21 @@ footer {
     .about {
         grid-template-columns: 30% 70%;
     } 
+}
+
+@media (max-width: 500px) {
+    .about {
+        display: block;
+        padding-bottom: 20px;
+        padding-left: 20vw;
+    }
+    
+    .about-text {
+        width: auto;
+        height: auto;
+    }
+
+    .about-image {
+        display: none;
+    }
 }
