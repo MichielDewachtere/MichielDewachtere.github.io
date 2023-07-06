@@ -1,3 +1,7 @@
-function redirectToPage(newPage) {
-    window.location.href = newPage; // Replace "new_page.html" with the desired page URL
+let menu = document.querySelector("#menu-icon");
+let navList = document.querySelector(".navlist");
+
+menu.onclick = () => {
+    menu.classList.toggle("bx-x");
+    navList.classList.toggle("open");
 }

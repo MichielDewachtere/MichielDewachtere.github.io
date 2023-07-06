@@ -3,90 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dewachtere Michiel</title>
+    <title>Portfolio Website</title>
 
-    <link rel="stylesheet" href="stylesheet.css">
-    <script src="script.js"></script>
+    <!-- custom css link -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- boxicons link -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- remixicons link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- google fonts links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono&family=Poppins:wght@300;400;500;600;800;900&display=swap" rel="stylesheet"></head>
 <body>
-    <nav>
-        <h1>Michiel Dewachtere</h1>
-        
-        <ul class="nav-buttons">
-            <li><button class="nav-button">Projects</button></li>
-            <li><button class="nav-button">Contact</button></li>
-            <li><button class="nav-button">Resume</button></li>
-        </ul>
-    </nav>
-        
-    <div class="about-me">
-        <h2>About Me</h2>
 
-        <img src="data/portfolio-pic.jpg" alt="Portfolio picture of me" class="portfolio-picture">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit sed ullamcorper morbi tincidunt ornare massa. Lorem mollis aliquam ut porttitor. Arcu risus quis varius quam quisque id diam. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Vel risus commodo viverra maecenas accumsan lacus vel. Commodo odio aenean sed adipiscing diam donec. Convallis tellus id interdum velit laoreet id donec ultrices. Ut ornare lectus sit amet est placerat in. Adipiscing elit pellentesque habitant morbi tristique. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. Neque viverra justo nec ultrices dui sapien eget mi proin. Dignissim sodales ut eu sem integer vitae justo eget. Sed risus ultricies tristique nulla aliquet enim. Cras pulvinar mattis nunc sed blandit libero. Etiam tempor orci eu lobortis elementum. Cras ornare arcu dui vivamus.</p>
+    <header>
+        <a href="#" class="logo">MICHIEL.</a>
+        
+        <ul class="navlist">
+            <li><a href="#">About Me</a></li>
+            <!-- <li><a href="#">Education</a></li>  -->
+            <!-- <li><a href="#">Experience</a></li>  -->
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="data/test.pdf" download="resume.pdf"><i class="ri-file-download-line"></i>Resume</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <div class="content">
+
+        <section class="about">
+            <div class="about-image">
+                <img src="data/portfolio-pic.jpg" alt="portfolio-picture">
+            </div>
+
+            <div class="about-text">
+                <h2>std::cout &lt;&lt; "hello world";</h2>
+                
+                <p><span class="name-text">I'm Michiel Dewachtere</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>            
+        </section>
+        
+        <section class="projects">
+            <h2>My Projects</h2>
+
+            <ul class="project-list">
+                <li class="project-card" onclick="redirectToPage('new_page.html')">
+                    <img src="data/dummy-image.jpg" alt="Project Picture" class="project-thumbnail">
+                    <h3>RealEngine</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Erat nam at lectus urna duis convallis. 
+                        Pharetra convallis posuere morbi leo urna. 
+                        Facilisi morbi tempus iaculis urna id volutpat lacus laoreet.
+                    </p>
+                    <ul class="tags">
+                        <li class="tag"><img src="data/cpp.png" alt="cpp icon" class="icon"></li>
+                        <li class="tag"><img src="data/visual-studio.png" alt="visual studio icon" class="icon"></li>
+                    </ul>
+                </li>
+                <li class="project-card" onclick="redirectToPage('new_page.html')">
+                    <img src="data/dummy-image.jpg" alt="Project Picture" class="project-thumbnail">
+                    <h3>Overcooked! 2 - Copy</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Erat nam at lectus urna duis convallis. 
+                        Pharetra convallis posuere morbi leo urna. 
+                        Facilisi morbi tempus iaculis urna id volutpat lacus laoreet.
+                    </p>
+                    <ul class="tags">
+                        <li class="tag"><img src="data/cpp.png" alt="cpp icon" class="icon"></li>
+                        <li class="tag"><img src="data/visual-studio.png" alt="visual studio icon" class="icon"></li>
+                        <li class="tag"><img src="" alt="overlord engine" class="icon"></li>
+                    </ul>
+                </li>
+                <li class="project-card" onclick="redirectToPage('new_page.html')">
+                    <img src="data/dummy-image.jpg" alt="Project Picture" class="project-thumbnail">
+                    <h3>Project 3</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Erat nam at lectus urna duis convallis. 
+                        Pharetra convallis posuere morbi leo urna. 
+                        Facilisi morbi tempus iaculis urna id volutpat lacus laoreet.
+                    </p>
+                    <ul class="tags">
+                        <li class="tag"><img src="data/c-sharp.png" alt="cpp icon" class="icon"></li>
+                        <li class="tag"><img src="data/visual-studio.png" alt="visual studio icon" class="icon"></li>
+                        <li class="tag"><img src="data/unity.png" alt="unity icon" class="icon"></li>
+                    </ul>
+                </li>
+                <li class="project-card" onclick="redirectToPage('new_page.html')">
+                    <img src="data/dummy-image.jpg" alt="Project Picture" class="project-thumbnail">
+                    <h3>Project 4</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Erat nam at lectus urna duis convallis. 
+                        Pharetra convallis posuere morbi leo urna. 
+                        Facilisi morbi tempus iaculis urna id volutpat lacus laoreet.
+                    </p>
+                    <ul class="tags">
+                        <li class="tag"><img src="data/cpp.png" alt="cpp icon" class="icon"></li>
+                        <li class="tag"><img src="data/visual-studio.png" alt="visual studio icon" class="icon" class="icon"></li>
+                        <li class="tag"><img src="data/unreal-engine.png" alt="unreal engine icon" class="icon"></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <p>You can contact me by mailing me here: 
+                <a href="mailto:michiel.dewachtere@student.howest.com" class="mail-link">michiel.dewachtere@student.howest.com</a>, 
+                I'll try got get back to you as quick as I can!
+                <br>Or you can check me out on the following platforms:
+            </p>
+            <ul class="contact-icons">
+                <li>
+                    <a href="https://github.com/MichielDewachtere" target="_blank"><i class="ri-github-fill"></i></a>
+                    <p>Github</p>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <p>LinkedIn</p>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><i class="ri-discord-line"></i></a>
+                    <p>Discord</p>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>This website was entirely made by ... me!</p>
+        </footer>
     </div>
 
-    <div>
-        <h2>My Projects</h2>
+    <!-- custom js link -->
+    <script src="script.js"></script>
     
-        <ul class="projects">
-            <li class="project-card" onclick="redirectToPage('new_page.html')">
-                <img src="data/dummy-image.jpg" alt="Project Picture" class="project-thumbnail">
-                <h3>RealEngine</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis. Pharetra convallis posuere morbi leo urna. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique.</p>
-                <ul class="tags">
-                    <li class="tag"><img src="data/cpp.png" alt="cpp icon" class="icon"></li>
-                    <li class="tag"><img src="data/visual-studio.png" alt="visual studio icon" class="icon"></li>
-                </ul>
-            </li>
-            <li class="project-card" onclick="redirectToPage('new_page.html')">
-                <img src="data/dummy-image.jpg" alt="Project Picture" class="project-thumbnail">
-                <h3>Overcooked! 2 - Copy</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis. Pharetra convallis posuere morbi leo urna. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique.</p>
-                <ul class="tags">
-                    <li class="tag"><img src="data/cpp.png" alt="cpp icon" class="icon"></li>
-                    <li class="tag"><img src="data/visual-studio.png" alt="visual studio icon" class="icon"></li>
-                    <li class="tag"><img src="" alt="overlord engine" class="icon"></li>
-                </ul>
-            </li>
-            <li class="project-card" onclick="redirectToPage('new_page.html')">
-                <img src="data/dummy-image.jpg" alt="Project Picture" class="project-thumbnail">
-                <h3>Project 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis. Pharetra convallis posuere morbi leo urna. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique.</p>
-                <ul class="tags">
-                    <li class="tag"><img src="data/c-sharp.png" alt="cpp icon" class="icon"></li>
-                    <li class="tag"><img src="data/visual-studio.png" alt="visual studio icon" class="icon"></li>
-                    <li class="tag"><img src="data/unity.png" alt="unity icon" class="icon"></li>
-                </ul>
-            </li>
-            <li class="project-card" onclick="redirectToPage('new_page.html')">
-                <img src="data/dummy-image.jpg" alt="Project Picture" class="project-thumbnail">
-                <h3>Project 4</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Erat nam at lectus urna duis convallis. Pharetra convallis posuere morbi leo urna. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Id venenatis a condimentum vitae sapien pellentesque habitant morbi tristique.</p>
-                <ul class="tags">
-                    <li class="tag"><img src="data/cpp.png" alt="cpp icon" class="icon"></li>
-                    <li class="tag"><img src="data/visual-studio.png" alt="visual studio icon" class="icon" class="icon"></li>
-                    <li class="tag"><img src="data/unreal-engine.png" alt="unreal engine icon" class="icon"></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div>
-        <h2>Contact Me</h2>
-        <ul class="contact-list">
-            <li class="contact"><a href="">Github</a></li>
-            <li class="contact"><a href="">Discord</a></li>
-            <li class="contact"><a href="mailto:michiel.dewachtere@gmail.com">Email</a></li>
-        </ul>
-    </div>
-
-    <footer>
-        <p>Website built by me</p>
-    </footer>
-
+    <!-- scroll reveal effect -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 </html>
