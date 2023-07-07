@@ -159,23 +159,31 @@ header {
 
     width: 300px;
     padding: 10px;
-    height: 450px;
+    /* height: 450px; */
+    height: auto;
 
     margin: 10px;
 
     border-radius: 10px;
+    transition: all 1s ease;
+}
+
+.project-card a {
+    color: white;
 }
 
 .project-card > * {
-    transition: all .05s ease;
+    transition: all 1s ease;
 }
 
-.project-card:hover > * {
+.project-card a:hover > * {
+    transform: scale(1.02);
+    /* cursor: pointer; */
+}
+
+.project-card a:hover > h3 {
     transform: scale(1.02);
     cursor: pointer;
-}
-
-.project-card:hover > h3 {
     display: inline-block;
     border-bottom: 2px solid white;
 }
@@ -193,7 +201,7 @@ header {
 }
 
 .tag {
-    padding: 20px 0px;
+    padding-top: 20px;
     margin-right: 5px;
 }
 
