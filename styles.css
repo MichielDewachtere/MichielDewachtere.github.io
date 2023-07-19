@@ -171,6 +171,14 @@ header {
     transition: all 1s ease;
 }
 
+.book-link {
+    border-bottom: 1px dotted white;
+}
+
+.book-link:hover {
+    border-bottom: 1px solid white;
+}
+
 .project-card a {
     color: white;
 }
