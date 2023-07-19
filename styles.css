@@ -162,6 +162,9 @@ header {
     /* height: 450px; */
     height: auto;
 
+    /* flex-direction: ; */
+    align-items: center;
+
     margin: 10px;
 
     border-radius: 10px;
@@ -198,16 +201,18 @@ header {
     padding: 0;
     display: flex;
     justify-content: right;
+    margin-top: auto;
 }
 
 .tag {
-    padding-top: 20px;
+    /* padding-top: 20px; */
     margin-right: 5px;
 }
 
 
 .tags img {
     width: 32px;
+    vertical-align: bottom;
 }
 
 
