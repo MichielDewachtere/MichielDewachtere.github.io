@@ -1,0 +1,97 @@
+@media (min-width: 1000px) {
+    .project-info-text {
+        margin: auto;
+        align-self: center;
+
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 1250px) {
+    :root {
+        --project-columns: 3;
+    }    
+
+    #menu-icon {
+        display: block;
+        justify-self: right;
+    }
+
+    .navlist {
+        position: absolute;
+
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        padding: 50px 20px;
+
+        background: black;
+        align-items: center;
+        flex-direction: column;
+
+        border-bottom-left-radius: 10px;
+        border-bottom: 2px solid var(--border-color);
+        border-left: 2px solid var(--border-color);
+
+        display: none;
+    }
+
+    .navlist a {
+        margin-left: 0;
+        display: block;
+        margin: 7px 0;
+    }
+
+    .navlist.open {
+        right: 0;   
+        display: flex;
+    }
+
+    .skills-education .content {
+        display: block;
+    }
+
+    .skills-image {
+        max-width: 80%;
+        margin-left: 0;
+    }
+
+    .skills-education .list {
+        max-width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .about-me-text {
+        text-align: right;
+        width: auto;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --project-columns: 2;
+    }
+
+    .profile-pic {
+        display: none;
+    }
+
+    .about-me .content {
+        display: block;
+    }
+
+    .about-me-text {
+        text-align: left;
+        width: auto;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    :root {
+        --project-columns: 1;
+    }   
+}

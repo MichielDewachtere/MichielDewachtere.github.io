@@ -22,8 +22,16 @@ contactAnchor.addEventListener('click', function (event) {
   contactTargetSection.scrollIntoView({ behavior: 'smooth' });
 });
 
-const aboutAnchor = document.querySelector('a[href="#about"]');
-const aboutTargetSection = document.querySelector('#about');
+const skillsAnchor = document.querySelector('a[href="#skills-education"]');
+const skillsTargetSection = document.querySelector('#skills-education');
+
+skillsAnchor.addEventListener('click', function (event) {
+  event.preventDefault(); // Prevent default link behavior
+  skillsTargetSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+const aboutAnchor = document.querySelector('a[href="#about-me"]');
+const aboutTargetSection = document.querySelector('#about-me');
 
 aboutAnchor.addEventListener('click', function (event) {
   event.preventDefault(); // Prevent default link behavior

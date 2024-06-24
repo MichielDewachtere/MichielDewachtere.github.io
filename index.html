@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
+    <title>Michiel Dewachtere | Game Programmer</title>
 
     <!-- custom css link -->
+    <link rel="stylesheet" type="text/css" href="base.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
 
     <!-- boxicons link -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -15,175 +17,160 @@
     <script src="https://kit.fontawesome.com/86c43fbc21.js" crossorigin="anonymous"></script>
 
     <!-- google fonts links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono&family=Poppins:wght@300;400;500;600;800;900&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
-
     <header>
-        <a href="#" class="logo">MICHIEL.</a>
-        
-        <ul class="navlist">
-            <li><a href="#about">About Me</a></li>
-            <!-- <li><a href="#">Education</a></li>  -->
-            <!-- <li><a href="#">Experience</a></li>  -->
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="data/test.pdf" download="resume.pdf"><i class="fa-solid fa-file-arrow-down" style="color: #ffffff;"></i>Resume</a></li>
-        </ul>
-
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <!-- <i class="fa-solid fa-bars" id="menu-icon" style="color: #ffffff;"></i> -->
+        <div class="container">
+            <div class="content">
+                <h1><a href="index.html" class="logo">Michiel Dewachtere</a></h1>
+                <ul class="navlist">
+                    <li><a href="#about-me">About Me</a></li> 
+                    <li><a href="#skills-education">Skills and Education</a></li> 
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="data/test.pdf" download="resume.pdf"><i class="fa-solid fa-file-arrow-down" style="color: #ffffff;"></i>Resume</a></li>
+                </ul>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </div>
     </header>
 
-    <div class="content">
-
-        <section class="about" id="about">
-            <div class="about-image">
-                <img src="data/portfolio-pic.jpg" alt="portfolio-picture">
+    <section class="welcome">
+        <div class="container">
+            <div class="content">
+                <h2>Welcome to Michiel Dewachtere's Portfolio</h2>
+                <h3>Game Programmer</h3>
+                <a href="#" class="btn">Download Resume</a>
             </div>
+        </div>
+                <!-- <ul class="contact">
+                    <li><a href="">Github</a></li>
+                    <li><a href="">LinkedIn</a></li>
+                    <li><a href="">Itch.io</a></li>
+                </ul>             -->
+    </section>
 
-            <div class="about-text">
-                <h2>std::cout &lt;&lt; "hello world";</h2>
-                
-                <p>
-                    <!-- <span style="font-family: 'Martian Mono', monospace;">&lt;&lt; "</span> -->
-                    <span class="name-text">I'm Michiel Dewachtere</span>,
-                    I'm a game development student from Belgium. I currently study at Digital Arts and Entertainment in Kortrijk, Belgium.
-                    I've always been fascinated by how people could create entire worlds from just ones and zeros, and now I can happily say
-                    that I can do the same.
-                    <br><br>
-                    Although I still have a lot to learn, on this site you can see some of my personal/school projects I've made over the years.
-                    You can also take a look at my resume.
-                    <!-- <span style="font-family: 'Martian Mono', monospace;">";</span> -->
-                </p>
-            </div>            
-        </section>
-        
-        <section class="projects" id="projects">
-            <h2>My Projects</h2>
+    <section class="about-me" id="about-me">
+        <div class="container">
+            <div class="content">
+                <div class="about-me-text">
+                    <h2>About Me</h2>
+                    <p>Hi everyone, my name is <b>Michiel Dewachtere</b>. I'm a game development student from <b>Belgium</b>.
+                        I've been programming, primarily in <b>C++</b>, since 2021, when I started my bachelor's degree at 
+                        <b>DAE</b> in Kortrijk, Belgium. My interest lies primarily in the more technical aspects of the language, 
+                        along with engine and graphics programming. But honestly, I just love programming as a whole.</p>
+                </div>
+                <img src="data/portfolio-pic.jpg" alt="picture of me" class="profile-pic">
+            </div>
+        </div>
+    </section>
 
-            <ul class="project-list">
-                <li class="project-card">
-                    <a href="https://github.com/MichielDewachtere/GameEngine" target="_blank">
-                        <img src="data/dummy-image.jpg" alt="Project Picture" class="project-thumbnail">
+    <section class="skills-education" id="skills-education">
+        <div class="container">
+            <div class="content">
+                <img src="data/dummy-image.jpg" alt="Skills Image" class="skills-image">
+                <div class="list">
+                    <h2>My Skills and Education</h2>
+                    <h3>Programming</h3>
+                    <p>
+                        I am most comfortable writing in C++, which has been my primary programming language since 2021. 
+                        Over the years, I have become quite proficient in it. Additionally, I have some experience with C#,
+                        primarily through my work with Unity and WPF-projects.
+                    </p>
+                    <h3>Tools and Libraries</h3>
+                    <p>
+                        I am very familiar with <b>Visual Studio</b>. I regularly use <b>GitHub</b> and <b>Perforce</b> 
+                        for version control. Most of my projects are built using <b>SDL</b> and <b>Vulkan</b>, 
+                        and I have also worked with DirectX 11. During my education, I was introduced to CMake, 
+                        although my knowledge is currently limited. I am eager to learn more about this tool.
+                    </p>
+                    <h3>Education</h3>
+                    <p>
+                        I am currently studying Game Development at <b>Digital Arts and Entertainment</b>, 
+                        part of HoWest University in Kortrijk, Belgium.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="content">
+                <h2>My Personal Projects</h2>
+                <ul class="project-list">
+                    <li>
+                        <img src="data/dummy-image-square.png" alt="real engine" class="project-image">
                         <h3>RealEngine</h3>
-                        <p>
-                            A small game engine I've made over a solid 12 weeks. It heavily uses some of the patterns discussed in the book 
-                            <a href="https://gameprogrammingpatterns.com/" target="_blank" class="book-link">Game Programming Patterns by Robert Nystrom</a>.
-                            The engine is designed for 2D arcade games, but I would love to revisit it to make it even bigger and more accessible.
-                            <br><br>
-                            With the engine, there also comes a replica of the arcade game "Burger Time" showcasing the engine's abilities.
-                        </p>                        
-                        <ul class="tags">
-                            <li class="tag"><img src="data/cpp.png" alt="cpp icon" class="icon"></li>
-                            <li class="tag"><img src="data/visual-studio.png" alt="visual studio icon" class="icon"></li>
-                        </ul>
-                    </a>
-                </li>
-                <li class="project-card">
-                    <a href="https://eva-rubl.itch.io/group27gameproject" target="_blank">
-                        <img src="https://img.itch.zone/aW1hZ2UvMTkzNzI5MC8xMjMyNTI1NS5wbmc=/original/Qi8UHz.png" alt="Project Picture" class="project-thumbnail">
+                        <p>A small game engine I've made using some programming patterns</p>
+                        <a href="https://github.com/MichielDewachtere" target="_blank">more info</a>                        
+                    </li>
+                    <li>
+                        <img src="data/dummy-image-square.png" alt="RealMinecraft" class="project-image">
+                        <h3>RealMinecraft</h3>
+                        <p>A Minecraft clone made using Vulkan integrated into my own engine.</p>
+                        <a>more info</a>
+                    </li>
+                    <li>
+                        <img src="data/dummy-image-square.png" alt="Corporate Chaos" class="project-image">
                         <h3>Corporate Chaos</h3>
-                        <p>
-                            Corporate Chaos is a 2-4 player couch pvp racing game developed during my time at DAE. 
-                            The team consisted out of 2 programmers and 3 artists. My job mainly focussed on all the pick-ups
-                            and the environmental obstacles. The HUD, camera and menu's were also implemented by me. The game was designed and made
-                            in 12 weeks.
-                        </p>
-                        <ul class="tags">
-                            <li class="tag"><img src="data/c-sharp.png" alt="cpp icon" class="icon"></li>
-                            <li class="tag"><img src="data/unity.png" alt="visual studio icon" class="icon"></li>
-                        </ul>
-                    </a>
-                </li>
-                <!-- <li class="project-card">
-                    <a href="https://github.com/MichielDewachtere/" target="_blank">
-                        <img src="data/dummy-image.jpg" alt="Project Picture" class="project-thumbnail">
-                        <h3>Overcooked! 2 - Copy</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Erat nam at lectus urna duis convallis. 
-                            Pharetra convallis posuere morbi leo urna. 
-                            Facilisi morbi tempus iaculis urna id volutpat lacus laoreet.
-                        </p>
-                        <ul class="tags">
-                            <li class="tag"><img src="data/cpp.png" alt="cpp icon" class="icon"></li>
-                            <li class="tag"><img src="data/visual-studio.png" alt="visual studio icon" class="icon"></li>
-                            <li class="tag"><img src="" alt="overlord engine" class="icon"></li>
-                        </ul>
-                    </a>
-                </li>
-                <li class="project-card">
-                    <a href="https://github.com/MichielDewachtere/" target="_blank">
-                        <img src="data/dummy-image.jpg" alt="Project Picture" class="project-thumbnail">
-                        <h3>Project 3</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Erat nam at lectus urna duis convallis. 
-                            Pharetra convallis posuere morbi leo urna. 
-                            Facilisi morbi tempus iaculis urna id volutpat lacus laoreet.
-                        </p>
-                        <ul class="tags">
-                            <li class="tag"><img src="data/c-sharp.png" alt="cpp icon" class="icon"></li>
-                            <li class="tag"><img src="data/visual-studio.png" alt="visual studio icon" class="icon"></li>
-                            <li class="tag"><img src="data/unity.png" alt="unity icon" class="icon"></li>
-                        </ul>
-                    </a>    
-                </li>
-                <li class="project-card">
-                    <a href="https://github.com/MichielDewachtere/" target="_blank">
-                        <img src="data/dummy-image.jpg" alt="Project Picture" class="project-thumbnail">
-                        <h3>Project 4</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Erat nam at lectus urna duis convallis. 
-                            Pharetra convallis posuere morbi leo urna. 
-                            Facilisi morbi tempus iaculis urna id volutpat lacus laoreet.
-                        </p>
-                        <ul class="tags">
-                            <li class="tag"><img src="data/cpp.png" alt="cpp icon" class="icon"></li>
-                            <li class="tag"><img src="data/visual-studio.png" alt="visual studio icon" class="icon" class="icon"></li>
-                            <li class="tag"><img src="data/unreal-engine.png" alt="unreal engine icon" class="icon"></li>
-                        </ul>
-                    </a>
-                </li> -->
-            </ul>
-        </section>
-        
+                        <p>A game me and 4 others put together in roughly 12 weeks.</p>
+                        <a>more info</a>
+                    </li>
+                    <li>
+                        <img src="data/dummy-image-square.png" alt="School Projects" class="project-image">
+                        <h3>School Projects</h3>
+                        <p>A collection of other various school projects that might take your interest.</p>
+                        <a>more info</a>
+                    </li>
+                    <li>
+                        <img src="data/dummy-image-square.png" alt="real engine" class="project-image">
+                        <h3>RealEngine</h3>
+                        <p>A small game engine I've made using some programming patterns</p>
+                        <a>more info</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
         <section class="contact" id="contact">
-            <h2>Contact Me</h2>
-            <p>You can contact me by mailing me here: 
-                <a href="mailto:michiel.dewachtere@student.howest.com" class="mail-link">michiel.dewachtere@student.howest.com</a>, 
-                I'll try got get back to you as quick as I can!
-                <br>Or you can check me out on the following platforms:
-            </p>
-            <ul class="contact-icons">
-                <li>
-                    <a href="https://github.com/MichielDewachtere" target="_blank">
-                        <i class="fa-brands fa-github" style="color: #000000;"></i>
-                    </a>
-                    <p>Github</p>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/michiel-dewachtere-1960aa224/" target="_blank">
-                        <i class="fa-brands fa-linkedin" style="color: #000000;"></i>
-                    </a>
-                    <p>LinkedIn</p>
-                </li>
-                <li>
-                    <a href="https://mich2002.itch.io/" target="_blank">
-                        <i class="fa-brands fa-itch-io" style="color: #000000;"></i>
-                    </a>
-                    <p>itch.io</p>
-                </li>
-            </ul>
+            <div class="container">
+            <div class="content">
+                <h2>Contact Me</h2>
+                <p>You can reach my by mail via 
+                    <a href="mailto:michiel.dewachtere@student.howest.com" class="mail-link">michiel.dewachtere@student.howest.com</a>, 
+                    I'll try got get back to you as quick as I can!
+                    <br>Or you can check me out on the following platforms:
+                </p>
+                <ul class="contact-icons">
+                    <li>
+                        <a href="https://github.com/MichielDewachtere" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <p>Github</p>
+                    </li>
+                    <li>
+                       <a href="https://www.linkedin.com/in/michiel-dewachtere-1960aa224/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <p>LinkedIn</p>
+                    </li>
+                    <li>
+                        <a href="https://mich2002.itch.io/" target="_blank">
+                            <i class="fa-brands fa-itch-io"></i>
+                        </a>
+                        <p>itch.io</p>
+                    </li>
+                </ul>
+            </div>
+            </div>
         </section>
 
         <footer>
             <p>This website was entirely made by ... me!</p>
         </footer>
-    </div>
 
     <!-- custom js link -->
     <script src="script.js"></script>
