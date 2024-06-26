@@ -1,5 +1,5 @@
 :root {
-    /* Color Variables */
+    /* Color Variales */
     --background-color: black;
     --background-color-alt:#333;
     --border-color: gray;
@@ -24,8 +24,33 @@
     --project-columns: 4;
 }
 
-body > * {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: var(--base-font-size);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+
     font-family: 'Roboto', sans-serif;
+}
+
+b {
+    color: var(--accent-color);
+}
+
+.btn {
+    background: var(--accent-color);
+    color: var(--welcome-text-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 header .container {
