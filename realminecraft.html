@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michiel Dewachtere | Template</title>
+    <title>Michiel Dewachtere | RealMinecraft</title>
 
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="project-page.css">
@@ -12,9 +12,9 @@
     <header>
         <div class="container">
                 <div class="content">
-                <h1><a href="main.html" class="logo">Michiel Dewachtere</a></h1>
+                <h1><a href="index.html" class="logo">Michiel Dewachtere</a></h1>
                 <ul class="navlist">
-                    <li><a href="main.html">Home</a></li> 
+                    <li><a href="index.html">Home</a></li> 
                 </ul>
             </div>
         </div>
@@ -24,11 +24,17 @@
         <div class="container">
             <div class="content">
                 <h1>Real Minecraft</h1>
-                <p class="info-text">Introduction about Real Minecraft -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula quam, malesuada eget fermentum vitae, molestie in massa. Donec at tortor dignissim, porta libero vel, ultricies risus. Vivamus vel lectus luctus, molestie risus eu, lobortis libero. Fusce non dapibus erat, non rhoncus metus. Curabitur malesuada ornare turpis, sit amet cursus dolor. Proin eu faucibus tellus. Morbi pellentesque erat in magna sodales, in euismod felis viverra. Vestibulum molestie porttitor interdum. Fusce consequat sed ipsum id elementum. Pellentesque condimentum arcu eu molestie euismod. Praesent faucibus eu sem et elementum. In hac habitasse platea dictumst. Aenean elementum interdum lacus at congue. Sed bibendum gravida mauris, ac pharetra enim posuere in. Vestibulum aliquet odio eu elementum tristique.</p>
-                <a href="https://github.com/MichielDewachtere/VulkanMinecraft" class="btn" target="_blank">View on Github</a>
+                <p class="info-text">
+                    This Minecraft clone was made from scratch using modern C++20, <b>Vulkan</b>, <b>GLSL</b>, and <b>SDL</b>. The clone is built upon RealCore and <b>my own
+                    Vulkan abstraction</b>, which is named Real3D. The project handles some of the rendering aspects of Minecraft, including random terrain generation,
+                    transparency, sprites, and animated textures. Real3D is not a perfect abstraction, but I enjoyed working on it, and I am planning on
+                    improving it and learning more about Vulkan. For this project, it works quite well in my opinion. My interest in <b>graphics programming</b> skyrocketed while working on this
+                    project, and I have many more projects like this in mind.
+                </p>
+                <a href="https://github.com/MichielDewachtere/VulkanEngine" class="btn" target="_blank">View on Github</a>
             </div>
             <div class="image">
-                <img src="https://via.placeholder.com/720x480" alt="Project 1 Image">
+                <img src="data/minecraft_clone/minecraft_01.png" alt="Project 1 Image">
             </div>
         </div>
     </section>
@@ -40,36 +46,99 @@
                 <ul>
                     <li>
                         <h3>Introduction</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula quam, malesuada eget fermentum vitae, molestie in massa. Donec at tortor dignissim, porta libero vel, ultricies risus. Vivamus vel lectus luctus, molestie risus eu, lobortis libero. Fusce non dapibus erat, non rhoncus metus. Curabitur malesuada ornare turpis, sit amet cursus dolor. Proin eu faucibus tellus. Morbi pellentesque erat in magna sodales, in euismod felis viverra. Vestibulum molestie porttitor interdum. Fusce consequat sed ipsum id elementum. Pellentesque condimentum arcu eu molestie euismod. Praesent faucibus eu sem et elementum. In hac habitasse platea dictumst. Aenean elementum interdum lacus at congue. Sed bibendum gravida mauris, ac pharetra enim posuere in. Vestibulum aliquet odio eu elementum tristique.</p>
+                        <p>
+                            You've probably heard of it, Minecraft, it is an infinitly large sandox game where the player can build everything they can think of. The terrain
+                            is made of cubes layed out by using a noise algorithm. The world consits of multiple chunks (meshes). Only a small amount of these chunks are
+                            rendered obviously, for performance reasons. On my laptop, my clone of the game ran smoothly (60FPS) up to a render distance of 12 (25 x 25 chunks). When
+                            traveling, new chunks are created, while old chunks, now out of the render distance, are deleted. Any progression on any save will be saved.
+                        </p>
                     </li>
                     <li>
                         <h3>Real 3D</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula quam, malesuada eget fermentum vitae, molestie in massa. Donec at tortor dignissim, porta libero vel, ultricies risus. Vivamus vel lectus luctus, molestie risus eu, lobortis libero. Fusce non dapibus erat, non rhoncus metus. Curabitur malesuada ornare turpis, sit amet cursus dolor. Proin eu faucibus tellus. Morbi pellentesque erat in magna sodales, in euismod felis viverra. Vestibulum molestie porttitor interdum. Fusce consequat sed ipsum id elementum. Pellentesque condimentum arcu eu molestie euismod. Praesent faucibus eu sem et elementum. In hac habitasse platea dictumst. Aenean elementum interdum lacus at congue. Sed bibendum gravida mauris, ac pharetra enim posuere in. Vestibulum aliquet odio eu elementum tristique.</p>
+                        <p>
+                            Real3D was built by following the <a href="https://vulkan-tutorial.com/" target="_blank" style="color: var(--accent-color);">Vulkan Tutorial</a>.
+                            The version the Minecraft clone was built upon was created in the course of 12 weeks. The engine ofcours handles everything render related, and comes with some handy
+                            components, like a <b>camera component</b> and a <b>mesh component</b>. There is also an option to load meshes, textures and shaders. <b>Materials with custom pipelines</b>
+                            can also be created by the user and applied to any mesh. <b>Frustum culling using AABB</b> is also implemented in the engine for a better performance. Sadly I didn't
+                            find the time to fully include ImGui in the project yet, but this is on the top of my todo list. 
+                        </p>
                     </li>
                     <li>
                         <h3>Features</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula quam, malesuada eget fermentum vitae, molestie in massa. Donec at tortor dignissim, porta libero vel, ultricies risus. Vivamus vel lectus luctus, molestie risus eu, lobortis libero. Fusce non dapibus erat, non rhoncus metus. Curabitur malesuada ornare turpis, sit amet cursus dolor. Proin eu faucibus tellus. Morbi pellentesque erat in magna sodales, in euismod felis viverra. Vestibulum molestie porttitor interdum. Fusce consequat sed ipsum id elementum. Pellentesque condimentum arcu eu molestie euismod. Praesent faucibus eu sem et elementum. In hac habitasse platea dictumst. Aenean elementum interdum lacus at congue. Sed bibendum gravida mauris, ac pharetra enim posuere in. Vestibulum aliquet odio eu elementum tristique.</p>
+                        <p>
+                            Some of RealMinecrafts features include <b>transparency</b> (water, leaves, flowers), <b>animated textures</b> (water), <b>sprites</b> (flowers), <b>procedurally generated terrain using simplex noise</b>,
+                            <b>dynamic meshes</b> and <b>loading/saving of chunks</b>. <br>Transparency was defently the hardest to implement, I chose to <b>sort</b> the <b>faces</b>  of the transparent meshes from furthest to closest to the player,
+                            but that came with its own flaws. I later learned about <b>depth peeling</b>, but I didn't have the time anymore to implement this. I am very interested in this subject and have done already some research,
+                            and would love to build a project around this. As mentioned, meshes in Real3D are dynamic, there can be vertices added and removed during rum time, so the player can place and
+                            destroy blocks wherever it wants. <br><b>Chunks</b> are stored in a <b>binary <i class="fa fa-sort-amount-asc" aria-hidden="true"></i></b>, I found it quit clever and fun to mess with this. Every chunk has one file, where its stores
+                            all of the blocks that have been changed. The position and type of the block are all mashed in a couple of bytes for maximum efficiency.  
+                        </p>
                     </li>
                     <li>
                         <h3>Future Work</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula quam, malesuada eget fermentum vitae, molestie in massa. Donec at tortor dignissim, porta libero vel, ultricies risus. Vivamus vel lectus luctus, molestie risus eu, lobortis libero. Fusce non dapibus erat, non rhoncus metus. Curabitur malesuada ornare turpis, sit amet cursus dolor. Proin eu faucibus tellus. Morbi pellentesque erat in magna sodales, in euismod felis viverra. Vestibulum molestie porttitor interdum. Fusce consequat sed ipsum id elementum. Pellentesque condimentum arcu eu molestie euismod. Praesent faucibus eu sem et elementum. In hac habitasse platea dictumst. Aenean elementum interdum lacus at congue. Sed bibendum gravida mauris, ac pharetra enim posuere in. Vestibulum aliquet odio eu elementum tristique.</p>
+                        <p>
+                           As mentioned before, improving and learning more about <b>transparency in graphics programming</b> is definitely a priority for me. I found it quit intreging that such a
+                           simple thing as transparency that we dont even think about in real life, can be so difficult to add on to our screens. I also wanted to experiment more with <b>shaders</b>,
+                           as this project lacks a bit of those. <b>Dynamic lighting</b> is also something that I could experiment with. 
+                        </p>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- <section class="project-applications">
+    <section class="project-gallery">
         <div class="container">
             <div class="content">
-                <h2>Pengo</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula quam, malesuada eget fermentum vitae, molestie in massa. Donec at tortor dignissim, porta libero vel, ultricies risus. Vivamus vel lectus luctus, molestie risus eu, lobortis libero. Fusce non dapibus erat, non rhoncus metus. Curabitur malesuada ornare turpis, sit amet cursus dolor. Proin eu faucibus tellus. Morbi pellentesque erat in magna sodales, in euismod felis viverra. Vestibulum molestie porttitor interdum. Fusce consequat sed ipsum id elementum. Pellentesque condimentum arcu eu molestie euismod. Praesent faucibus eu sem et elementum. In hac habitasse platea dictumst. Aenean elementum interdum lacus at congue. Sed bibendum gravida mauris, ac pharetra enim posuere in. Vestibulum aliquet odio eu elementum tristique.</p>
-            </div>
-            <div class="image">
-                <img src="https://via.placeholder.com/448x576" alt="Real Minecraft">
+                <ul>
+                    <li>
+                        <div class="image">
+                            <img src="data/minecraft_clone/minecraft_transparency_issue.png" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Transparency</h4>
+                            <p>
+                                As you can see, the current handling of transparency presents some issues, especially when dealing with overlapping faces. This can be resolved using depth peeling, which I plan to experiment with in the future.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/minecraft_clone/minecraft_animated_water.gif" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Animated Textures</h4>
+                            <p>
+                                The water shader uses a larger sprite and a time parameter to create an animated effect by switching textures.
+                            </p>                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/minecraft_clone/minecraft_dynamic_meshes.gif" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Dynamic meshes</h4>
+                            <p>
+                                The mesh component is dynamic, allowing vertices to be added or removed during runtime. This means the player can place and destroy blocks in any chunk.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/minecraft_clone/minecraft_chunk_creation.gif" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Chunk creation/deleting and saving</h4>
+                            <p>
+                                Chunks are created when in range and deleted when out of range. Placed and destroyed blocks are saved to a file to ensure your progress is preserved.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <footer>
         <div class="content">
@@ -80,7 +149,7 @@
             <div class="footer-middle">
                 <h4>Navigation</h4>
                 <ul>
-                    <li><a href="main.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="data/michiel_dewachtere_cv.pdf" target="_blank"><i class="fa-solid fa-file-arrow-down" style="color: #ffffff;"></i>Resume</a></li>
                 </ul>
             </div>
