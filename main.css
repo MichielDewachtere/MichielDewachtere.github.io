@@ -55,8 +55,12 @@ b {
 
 header .container {
     z-index: 1001;
-    position: relative;
-    
+    position: fixed;
+
+    top: 0;
+    width: 100%;
+
+    background: black;
     border-bottom: 2px solid var(--border-color);
 }
 
