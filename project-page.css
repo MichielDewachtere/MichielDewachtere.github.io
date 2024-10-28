@@ -221,7 +221,7 @@ footer {
             display: grid;
 
             grid-template-columns: none;
-            column-gap: 0px;    
+            column-gap: 0;
 
             grid-template-rows: repeat(2, 0fr);
             row-gap: 50px;
@@ -241,6 +241,17 @@ footer {
                 max-width: 100%;
             }
         }
+
+        .video {
+            grid-row: 1;
+            grid-column: none;
+            justify-self: center;
+
+            iframe {
+                max-width: 100%;
+                aspect-ratio: 16 / 9;
+            }
+        }
     }
 
     .project-gallery {    
@@ -257,7 +268,7 @@ footer {
         .container {
             display: grid;
             grid-template-columns: none;
-            column-gap: 0px;
+            column-gap: 0;
 
             grid-template-rows: repeat(2, 0fr);
             row-gap: 50px;
