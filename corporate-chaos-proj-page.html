@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Page</title>
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dev-page.css">
+    <link rel="stylesheet" href="proj-page.css">
+
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">Michiel</a></h1>
+            </div>
+            <nav>
+                <ul class="navigation-list">
+                    <li><a href="index.html#about">About Me</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="data/michiel-dewachtere-cv.pdf" target="_blank">Resume</a></li>
+                </ul>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="project-overview">
+            <div class="container">
+                <div class="content">
+                    <h1>Corporate Chaos</h1>
+                    <p class="info-text">
+                        Corporate Chaos is a couch PVP-style racing game where you assume the role of an employee in a new start-up company.
+                        However, as you and some of your friends quickly become bored, you decide that racing on engine-driven office chairs
+                        around the bustling environment would be a more enjoyable and productive activity than working alongside your less
+                        entertaining colleagues. Chaos is bound to ensue.
+                    </p>
+                    <a href="https://eva-rubl.itch.io/group27gameproject" class="btn" target="_blank">View on Itch.io</a>
+                </div>
+                <div class="video">
+                    <iframe
+                            src="https://www.youtube.com/embed/Iqz54IJAqfo"
+                            title="Corporate Chaos Trailer"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="project-about">
+            <div class="container">
+                <h2>About the project</h2>
+                <h3>Introduction</h3>
+                <p>
+                    Corporate chaos is a couch co-op racing game made in Unity. It was made with a team of 5, containing 3 artists and 2 programmers.
+                    The game was made in the course of 12 weeks during my time at DAE. During this course we learned the <b>full production pipeline of a small indie game</b>.
+                    We used various tools during this process, such as <b>Perforce</b> for version control and <b>HacknPlan</b> for planning. The pipeline consisted out of 3 stages,
+                    We first had 3 weeks of brainstorming and <b>prototype</b>, followed by 6 weeks of <b>production</b>, made out of 2 production sprints. We ended with 2 weeks of <b>polishing</b>.
+                    During 1 week, we had to spend around 10 hours on the project, 4 hours were spent in an office like environment, where the whole team sat and worked together.
+                    <br><br>
+                    The game features various pickups and environmental obstacles. A minimap is also present. Accelerating is time based, when accelerating on different
+                    areas of the bar, the player is either boosted or slowed down.
+                    <br><br>
+                    Each game lasts for 3 laps. Their position and current lap is displayed in the HUD. Players can choose their color in the starting menu.
+                </p>
+                <h3>My Contribution</h3>
+                <p>
+                    We were only with 2 programmers. So the work was pretty spread out over different aspects of the game.
+                    <br>
+                    I implemented almost all the <b>pickups</b> and <b>obstacles</b>. The <b>camera</b> was also my work, we iterated over many different camera angles and systems. Level loading and different menus,
+                    along with the HUD are also my work.
+                </p>
+                <h3>Team Work</h3>
+                <p>
+                    Of course teamwork was a big element in this project. Communicating, not only with my fellow programmer but also with the artists was key. I had the pleasure
+                    of working with some very talented people.
+                    My fellow programmer
+                    <br><a href="https://www.linkedin.com/in/rikki-van-bogaert-991730283/" target="_blank">Rikki Van Bogaert</a>
+                    <br>and my 3 talented artist-colleagues.
+                    <br><a href="https://www.linkedin.com/in/miszla/" target="_blank">Michalina Gąsienica-Laskowy</a>
+                    <br><a href="https://www.linkedin.com/in/jordyconaert/" target="_blank">Jordy Conaert</a>
+                    <br><a href="https://www.linkedin.com/in/eva-r%C3%BCbl-42498427b/" target="_blank">Eva Rubl</a>
+                </p>
+                <h3>Unity</h3>
+                <p>
+                    As previously mentioned, this project was made using <b>Unity</b> and programmed in <b>C#</b>, here I learned most of what I know about the language. Choosing for Unity
+                    was a fairly easy decision, the art style we chose didn't need the realism provided by Unreal Engine, and personally, C++ was our main programming language for
+                    some time now, it was interesting to learn something new. We explored a fair bit of the engine, but there are still some things we haven't touched, and features
+                    I have yet to discover.
+                </p>
+            </div>
+        </section>
+
+        <section id="project-gallery">
+            <div class="container">
+                <ul>
+                    <li>
+                        <div class="image">
+                            <img src="data/pictures/corporate_chaos/map.png" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Game Map</h4>
+                            <p>
+                                The game is made up out of multiple areas, each having their own obstacles.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/pictures/corporate_chaos/3-players.png" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Corporate Chaos played by 3 players</h4>
+                            <p>
+                                Note how the minimap is displayed in the bottom right corner, where the 4th player would normally be.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/pictures/corporate_chaos/4-players.png" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Corporate Chaos played by 4 players</h4>
+                            <p>
+                                Note how the minimap is displayed in the center.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/pictures/corporate_chaos/2-players.png" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Corporate Chaos played by 2 players</h4>
+                            <p>
+                                As you can see more clearly here, the camera angle is slightly upwards behind the player, giving him a clear
+                                overview of the track. You can also see the acceleration bar, displayed under the player.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>This website was entirely made by ... me!<br>© 2024 Dewachtere Michiel</p>
+    </footer>
+
+    <script src="header.js"></script>
+</body>
+</html>

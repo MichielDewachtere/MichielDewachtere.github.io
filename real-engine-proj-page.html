@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Page</title>
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dev-page.css">
+    <link rel="stylesheet" href="proj-page.css">
+
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">Michiel</a></h1>
+            </div>
+            <nav>
+                <ul class="navigation-list">
+                    <li><a href="index.html#about">About Me</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="data/michiel-dewachtere-cv.pdf" target="_blank">Resume</a></li>
+                </ul>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="project-overview">
+            <div class="container">
+                <div class="content">
+                    <h1>Real Engine</h1>
+                    <p class="info-text">
+                        RealEngine is a modern C++20 engine developed over approximately 12 weeks. I am enthusiastic about continuing to work on and improve it.
+                        The engine is built using various SDL libraries and GLM. Multiple design patterns from the book
+                        <a href="https://gameprogrammingpatterns.com/" target="_blank">Game Programming Patterns by Robert Nystrom</a>
+                        were employed to make the engine more manageable and easier to use. Although we can't be certain if the engine functions without an application built on it,
+                        I have recreated the arcade classic Pengo to demonstrate its capabilities. This game also incorporates several patterns, such as the state pattern.
+                        <br><br> I thoroughly enjoyed working on this project and delving into the more low-level and technical aspects of programming. I learned a great deal,
+                        especially about smart pointers, template programming, and some STL algorithms.
+                    </p>
+                    <a href="https://github.com/MichielDewachtere/GameEngine-2024" class="btn" target="_blank">View on Github</a>
+                </div>
+                <img src="data/pictures/real_engine/real-engine.png" alt="Project 1 Image">
+            </div>
+        </section>
+
+        <section id="project-about">
+            <div class="container">
+                <h2>About Real Engine</h2>
+                <h3>Introduction</h3>
+                <p>
+                    The library is split up in multiple sub libraries. There is RealCore, the base of the library, containing your sound, input,
+                    scene logic, game object and component logic and the transform component, which is in charge of everything position,
+                    rotation and scale wise. Then there is the Real2D and Real3D parts, each in charge of rendering, the 2D engine uses SDL and
+                    a SDL renderer, while the 3D engine uses Vulkan for rendering and SDL for the window. Both have unique components.
+                </p>
+                <h3>Real Core</h3>
+                <p>
+                    As mentioned before, RealCore contains everything shared between Real2D and Real3D. It also employs numerous patterns, such as the
+                    component pattern, command pattern, service locator, dirty flag, and more. We will discuss these later. Let's look at some key aspects of RealCore:
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp; The <b>InputManager</b> class handles all input. The user first creates an input map, which they fill with actions. These actions contain
+                    an input type (controller, mouse, or keyboard), the input key, and key state (up, down, or pressed). These parameters are then linked to a custom
+                    command derived from either the GameObjectCommand class or the Command class.
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;  The <b>Locator</b> class currently only contains an <b>audio service</b>. Here, the user can control everything related to audio. When a sound
+                    needs to be loaded, the class pushes an event onto a queue. When the time comes to play the sound, it loads and plays the sound on a
+                    different thread for maximum efficiency.
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;  The <b>GameObject</b> class is the core component. This class can be filled with individual <b>components</b>, either engine-defined or user-defined. There are
+                    two types: the DrawableComponent class, with a render function, and the regular Component class. Game objects can also
+                    be bound to other game objects through a parent-child relationship. They are bound to the scene by default.
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;  <b>Scenes</b> are managed through the SceneManager class, where scenes can be created, loaded, and exited. A specific
+                    input map can also be bound to a scene.
+                    <br>RealCore also includes an <b>Observer</b> and <b>Subject</b> class, a <b>GameTime</b> class, a <b>Logger</b> class, and various other utilities.
+                </p>
+                <h3>Real 2D</h3>
+                <p>
+                    Real2D, as the name implies, is a 2D engine that uses <b>SDL</b> to render and create the window. As previously mentioned, it is built upon RealCore.
+                    Its engine class derives from the BaseEngine class located in RealCore. The engine comes with several components, including the <b>ColliderComponent</b>,
+                    which handles collision; <b>TextComponent</b>,  which renders text to the screen; <b>SpriteComponent</b>, which renders animated sprites; and
+                    <b>TextureComponent</b>, which renders still textures. The TextComponent also requires the TextureComponent to render its text. Fonts, textures,
+                    and sprites can be loaded through the ResourceManager. The 2D renderer also supports <b>ImGui</b>.
+                </p>
+                <h3>Real 3D</h3>
+                <p>
+                    As the name implies, this is a 3D engine. I won't go into too much detail here, as you can find all about it on the following page
+                    <a href="real-minecraft-proj-page.html">here</a>. In short, the engine is a <b>Vulkan</b> abstraction, and the window
+                    is again generated by <b>SDL</b>. It comes with several handy components and its own ContentManager class. This time, the project is created
+                    with <b>CMake</b>.
+                </p>
+                <h3>Patterns Used</h3>
+                <p>
+                    You probably already know that this engine consists of multiple patterns. Let's go over the most important ones.
+                    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;The <b>Observer</b> pattern is used extensively throughout the engine. A small example is in the SceneManager class,
+                    where it notifies all listeners when a scene gets loaded or exited. The subject can pass multiple arguments through its
+                    notify function that notifies the observer.
+                    &nbsp;&nbsp;If you want to learn more about this pattern, you can read about it
+                    <a href="https://gameprogrammingpatterns.com/observer.html" target="_blank">here</a>.
+                    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Another pattern used is the <b>Command</b> pattern. The engine uses it in combination with input. In RealEngine, there are two variants:
+
+                    <b>GameObjectCommand</b>, which has a GameObject* parameter, and the regular Command. When the correct combination of input key, type, and state have
+                    been met, the InputManager will call the Execute() function of the command, which will execute the user-defined logic.
+                    <br>&nbsp;&nbsp;If you want to learn more about this pattern, you can read about it
+                    <a href="https://gameprogrammingpatterns.com/command.html" target="_blank">here</a>.
+
+                    <br><br>&nbsp;&nbsp;&nbsp;&nbsp;The most important pattern of them all is the <b>Component</b> pattern. This pattern follows the rule of <b>composition over inheritance</b>.
+                    It decouples the game objects significantly. Instead of having each game object derive from a class with some logic, a component can be added through, let's say, GameObject::AddComponent&lt;T&gt;(),
+                    along with some arguments. The component has some virtual functions like update, render, start, kill, and so on. Plus, it has a reference to its owner,
+                    so it can call other components of said owner.
+                    <br>&nbsp;&nbsp;If you want to learn more about this pattern, you can read about it
+                    <a href="https://gameprogrammingpatterns.com/component.html" target="_blank">here</a>.
+
+                    <br><br>There are a few more patterns that need to be mentioned, such as
+                    the <a href="https://gameprogrammingpatterns.com/service-locator.html" target="_blank">service locator</a>,
+                    the <a href="https://gameprogrammingpatterns.com/singleton.html" target="_blank">singleton</a>,
+                    the <a href="https://gameprogrammingpatterns.com/dirty-flag.html" target="_blank">dirty flag</a>,
+                    the <a href="https://gameprogrammingpatterns.com/game-loop.html" target="_blank">game loop</a>, of course,
+                    and the <a href="https://gameprogrammingpatterns.com/event-queue.html" target="_blank">event queue</a>.
+                </p>
+                <h3>Future Work</h3>
+                <p>
+                    I would love to keep working on this project. It has taught me a lot about template programming, smart pointers, and writing cleaner and more manageable code.
+                    Especially in the 3D part, there is much room for improvement. A level editor could also be a future project of mine. Only time will tell.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-overview">
+            <div class="container">
+                <img src="data/pictures/real_engine/pengo.png" alt="Pengo Game">
+
+                <div class="content">
+                    <h2>Pengo</h2>
+                    <p>
+                        As mentioned before, a fully playable clone of the arcade classic Pengo is implemented with the engine to demonstrate its functionality. The game
+                        is almost a complete replica, with improvised enemies, some animations, and minor adjustments to settings.
+                        The game features 3 modes: the regular <b>PvE</b> mode, <b>multiplayer</b> mode where players can <b>cooperate</b> to defeat Sno-Bees, or <b>compete</b>
+                        against each other with one player as Pengo and the other as a Sno-Bee.
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp; The levels are procedurally generated using a <b>reversed backtracking</b> algorithm. High scores are also locally
+                        saved, allowing players to track their rankings on their own machine.
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp; One design pattern used in this project is the <b>state</b> pattern. Enemy behavior is implemented using multiple states, and the playable enemy also utilizes these states.
+
+                        <br><br> This project has taught me a great deal about gameplay programming. <b>I emphasized keeping classes small and manageable</b>, utilizing the state pattern to avoid a monolithic enemy class that handles everything.
+                        Similarly, a shared movement class reduced duplicated code across multiple classes, and splitting different functionalities into separate classes prevented a large, unwieldy player class.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>This website was entirely made by ... me!<br>© 2024 Dewachtere Michiel</p>
+    </footer>
+
+    <script src="header.js"></script>
+</body>
+</html>

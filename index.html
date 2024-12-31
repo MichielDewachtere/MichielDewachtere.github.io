@@ -1,170 +1,255 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Michiel Dewachtere, a game programmer specializing in C++ and Unreal Engine. Discover more about me and my projects.">
+
     <title>Michiel Dewachtere | Game Programmer</title>
 
     <!-- custom css link -->
-    <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="responsive.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
 
-    <!-- google fonts links -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css">
 
-    <!-- FontAwesome link -->
-    <script src="https://kit.fontawesome.com/86c43fbc21.js" crossorigin="anonymous"></script>
-
-    <!-- boxicons link -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
+    <!-- Header with name/logo and buttons that scroll down -->
     <header>
         <div class="container">
-            <div class="content">
-                <h1><a href="index.html" class="logo">Michiel Dewachtere</a></h1>
-                <ul class="navlist">
-                    <li><a href="#about-me">About Me</a></li> 
-                    <li><a href="#skills-education">Skills and Education</a></li> 
+            <div class="logo">
+                <h1><a href="index.html">Michiel</a></h1>
+            </div>
+            <nav>
+                <ul class="navigation-list">
+                    <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="data/michiel_dewachtere_cv.pdf" target="_blank"><i class="fa-solid fa-file-arrow-down" style="color: #ffffff;"></i>Resume</a></li>
+                    <li><a href="data/michiel-dewachtere-cv.pdf" target="_blank">Resume</a></li>
                 </ul>
                 <div class="bx bx-menu" id="menu-icon"></div>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <section class="welcome">
-        <div class="container">
-            <div class="content">
-                <h2>Welcome to Michiel Dewachtere's Portfolio</h2>
-                <h3>Game Programmer</h3>
-                <a href="data/michiel_dewachtere_cv.pdf" target="_blank" class="btn">Get Resume</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-me" id="about-me">
-        <div class="container">
-            <div class="content">
-                <div class="about-me-text">
-                    <h2>About Me</h2>
+    <main>
+        <section id="welcome">
+            <div class="overlay">
+                <div class="content">
+                    <h1>Michiel</h1>
+                    <h2>Game Programmer</h2>
                     <p>
-                        Hi and welcome, my name is <b>Michiel Dewachtere</b>. I'm a game development student from <b>Belgium</b>.
-                        I've been programming, primarily in <b>C++</b>, since 2021, when I started my bachelor's degree at 
-                        <b>DAE</b> in Kortrijk, Belgium. My interest lies primarily in the more technical aspects of the language, 
-                        along with engine and graphics programming. But honestly, I just love programming as a whole.
+                        Hello! I'm Michiel Dewachtere, a passionate game programmer. Explore my projects and learn more about my journey in game development.
                     </p>
+                    <a href="data/michiel-dewachtere-cv.pdf" target="_blank" class="btn">Get My Resume</a>
                 </div>
-                <img src="data/portfolio-pic.jpg" alt="picture of me" class="profile-pic">
-            </div>
-        </div>
-    </section>
-
-    <section class="skills-education" id="skills-education">
-        <div class="container">
-            <div class="content">
-                <img src="data/dummy-image.jpg" alt="Skills Image" class="skills-image">
-                <div class="list">
-                    <h2>My Skills and Education</h2>
-                    <h3>Programming</h3>
-                    <p>
-                        I am most comfortable writing in <b>standard C++</b>, which has been my primary programming language since 2021.
-                        Over the years, I have become quite proficient in it. Since september 2024, I have also been gaining some experience with C++ in <b>UE5</b>.
-                        Additionally, I have some experience with <b>C#</b>, primarily through my work with Unity and WPF-projects.
-                    </p>
-                    <h3>Tools and Libraries</h3>
-                    <p>
-                        I am very familiar with <b>Visual Studio</b>. I regularly use <b>Git</b>, mainly via Github. I also am used to using <b>Perforce</b>.
-                        Most of my projects are built using <b>SDL</b> and <b>Vulkan</b>,
-                        and I have also worked with DirectX 11. During my education, I was introduced to CMake, 
-                        although my knowledge is currently limited. I am eager to learn more about this tool.
-                    </p>
-                    <h3>Education</h3>
-                    <p>
-                        I am currently studying Game Development at <b>Digital Arts and Entertainment</b>, 
-                        part of HoWest University of Applied Sciences in Kortrijk, Belgium.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="content">
-                <h2>My Personal Projects</h2>
-                <ul class="project-list">
-                    <li>
-                        <img src="data/real_engine/real-engine.png" alt="real engine" class="project-image">
-                        <h3>RealEngine</h3>
-                        <p>A small game engine I've made using some programming patterns</p>
-                        <a href="realengine.html">more info</a>
-                    </li>
-                    <li>
-                        <img src="data/minecraft_clone/minecraft-clone.png" alt="RealMinecraft" class="project-image">
-                        <h3>RealMinecraft</h3>
-                        <p>A Minecraft clone made using Vulkan integrated into my own engine.</p>
-                        <a href="realminecraft.html">more info</a>
-                    </li>
-                    <li>
-                        <img src="data/corporate-chaos.png" alt="Corporate Chaos" class="project-image">
-                        <h3>Corporate Chaos</h3>
-                        <p>A co-op racing game me and 4 others put together in roughly 12 weeks.</p>
-                        <a href="corporatechaos.html">more info</a>
-                    </li>
-                    <li>
-                        <img src="data/school_projects/school-projects.png" alt="School Projects" class="project-image">
-                        <h3>School Projects</h3>
-                        <p>A collection of other various school projects that might take your interest.</p>
-                        <a href="schoolprojects.html">more info</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-        <section class="contact" id="contact">
-            <div class="container">
-            <div class="content">
-                <h2>Contact Me</h2>
-                <p>You can reach my by mail via 
-                    <a href="mailto:michiel.dewachtere@student.howest.com" class="mail-link">michiel.dewachtere@student.howest.com</a>, 
-                    I'll try got get back to you as quick as I can!
-                    <br>Or you can check me out on the following platforms:
-                </p>
-                <ul class="contact-icons">
-                    <li>
-                        <a href="https://github.com/MichielDewachtere" target="_blank">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <p>Github</p>
-                    </li>
-                    <li>
-                       <a href="https://www.linkedin.com/in/michiel-dewachtere-1960aa224/" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <p>LinkedIn</p>
-                    </li>
-                    <li>
-                        <a href="https://mich2002.itch.io/" target="_blank">
-                            <i class="fa-brands fa-itch-io"></i>
-                        </a>
-                        <p>itch.io</p>
-                    </li>
-                </ul>
-            </div>
             </div>
         </section>
 
-        <footer>
-            <p>This website was entirely made by ... me!</p>
-        </footer>
+        <section id="about">
+            <div class="container">
+                <div class="about-left">
+                    <img src="data/pictures/headshot.jpg" alt="Your photo" class="about-image">
+                </div>
+                <div class="about-right">
+                    <h2>About Me</h2>
+                    <p>
+                        Hi and thanks for checking out my portfolio, my name is <b>Michiel Dewachtere</b>. I'm a game development student in my final year from <b>Belgium</b>.
+                        I've been programming, primarily in <b>C++</b> and <b>C#</b>, since 2021. My interest lies primarily in the more low-level stuff, and trying out new stuff programming
+                        related, like building this website. Currently, I am mostly interested in <b>graphics programming</b> and I would also love to learn more about low-level programming, subjects like
+                        compilers and assembly seem very interesting to me.
+                    </p>
 
-    <!-- custom js link -->
+                    <div class="info-links">
+                        <span class="info-link active" data-target="skills">Skills</span>
+                        <span class="info-link" data-target="experience">Experience</span>
+                        <span class="info-link" data-target="education">Education</span>
+                    </div>
+
+                    <div class="info-content">
+                        <div id="skills" class="info-text active">
+                            <p>
+                                I am proficient in <b>C++</b> and <b>C#</b> and have strong experience working with game engines like <b>Unity</b> and <b>Unreal Engine 5</b>.
+                                My knowledge extends to frameworks such as <b>SDL2</b> and <b>Vulkan</b>, with basic experience in <b>GLSL</b> and <b>CMake</b>.
+                                I am also familiar with tools like <b>RenderDoc</b> and have worked with various IDEs throughout my career.
+                                <br>
+                                In addition to technical expertise, I excel in <b>team collaboration</b>, <b>problem-solving</b>, and <b>adaptability</b>,
+                                and I have experience communicating complex ideas effectively to diverse teams.
+                            </p>
+                        </div>
+                        <div id="experience" class="info-text">
+                            <p>
+                                I will be completing an internship at <b>XR-Labs Belgium</b> from February to June 2025, working as a programmer on a simulation project for the Belgian Defence Forces.
+                                <br> Due to a non-disclosure agreement (NDA), I cannot provide further details about this internship.
+                            </p>
+                        </div>
+                        <div id="education" class="info-text">
+                            <p>
+                                I am currently in my final year pursuing a <b>bachelor's degree in Game Development</b> at Digital Arts and Entertainment,
+                                a program offered by Howest University of Applied Sciences in West Flanders.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>My Projects</h2>
+                <p>
+                    Here are a few of my projects. Visit the <b>project page</b> to learn more about them
+<!--                    , including <b>development logs</b> for some of the featured projects-->
+                    .
+                </p>
+            </div>
+            <div class="projects-container">
+                <button class="scroll-button left" aria-label="Scroll left">&lt;</button>
+                <div class="projects-wrapper">
+                    <div class="project-card">
+                            <img src="data/pictures/main/real-engine.png" alt="Real Engine">
+                            <h3>RealEngine</h3>
+                            <p>A small game engine I've made using some programming patterns.</p>
+                            <div class="project-actions">
+                                <a href="real-engine-proj-page.html" class="btn">Project Page</a>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">C++</span>
+                                <span class="tag">SDL2</span>
+                                <span class="tag">Custom Engine</span>
+                            </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card-content">
+                            <img src="data/pictures/main/real-minecraft.png" alt="Real Minecraft">
+                            <h3>RealMinecraft</h3>
+                            <p>A Minecraft clone made using Vulkan integrated into my own engine.</p>
+                            <div class="project-actions">
+                                <a href="real-minecraft-proj-page.html" class="btn">Project Page</a>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">C++</span>
+                                <span class="tag">Vulkan</span>
+                                <span class="tag">Custom Engine</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card-content">
+                            <img src="data/pictures/main/corporate-chaos.png" alt="Corporate Chaos">
+                            <h3>Corporate Chaos</h3>
+                            <p>A co-op racing game me and 4 others put together in roughly 12 weeks.</p>
+                            <div class="project-actions">
+                                <a href="corporate-chaos-proj-page.html" class="btn">Project Page</a>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">C#</span>
+                                <span class="tag">Unity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card-content">
+                            <img src="data/pictures/main/dream-machine.png" alt="Dream Machine">
+                            <h3>Dream Machine</h3>
+                            <p>A gamified visual experience made on request by a client in 12 weeks, together with 4 other students.</p>
+                            <div class="project-actions">
+<!--                                <a href="dream-machine-proj-page.html" class="btn">Project Page</a>-->
+                                <a href="in-development.html" class="btn">Project Page</a>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">C++</span>
+                                <span class="tag">Unreal Engine</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card-content">
+                            <img src="data/pictures/main/school-projects.png" alt="School Projects">
+                            <h3>School Projects</h3>
+                            <p>A collection of other various school projects that might take your interest.</p>
+                            <div class="project-actions">
+                                <a href="school-projects-proj-page.html" class="btn">Project Page</a>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">C++</span>
+                                <span class="tag">C#</span>
+                                <span class="tag">Graphics</span>
+                                <span class="tag">Tools</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-button right" aria-label="Scroll right">&gt;</button>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <!-- Left Column: Contact Details -->
+                <div class="contact-details">
+                    <h2>Contact</h2>
+                    <p class="section-intro">
+                        I’d love to hear from you! Feel free to reach out via email or connect with me on social media.
+                    </p>
+                    <p>Email: <a href="mailto:michiel.dewachtere@student.howest.be">michiel.dewachtere@student.howest.be</a></p>
+                    <p>Location: <span>Belgium (available remotely or in-person across the country)</span></p>
+                    <p>Availability: <span>Open to questions, opportunities, or collaborations — don’t hesitate to reach out!</span></p>
+                    <div class="social-icons">
+                        <div class="social-item">
+                            <a href="https://github.com/michieldewachtere" class="icon" target="_blank" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <span class="social-label">Github</span>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://www.linkedin.com/in/michiel-dewachtere-1960aa224/" class="icon" target="_blank" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <span class="social-label">LinkedIn</span>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://mich2002.itch.io/" class="icon" target="_blank" title="Itch.io">
+                                <i class="fab fa-itch-io"></i>
+                            </a>
+                            <span class="social-label">Itch.io</span>
+                        </div>
+                        <div class="social-item">
+                            <a href="javascript:void(0);" onclick="copyToClipboard()" class="icon" title="Discord">
+                                <i class="fab fa-discord"></i>
+                            </a><span class="social-label">Discord</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact Form -->
+                <div class="contact-form-column">
+                    <form class="contact-form">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>This website was entirely made by ... me!<br>© 2024 Dewachtere Michiel</p>
+    </footer>
+
     <script src="script.js"></script>
+    <script src="header.js"></script>
 </body>
 </html>
