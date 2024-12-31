@@ -27,8 +27,10 @@
 const scrollContainer = document.querySelector('.projects-wrapper');
 const leftButton = document.querySelector('.scroll-button.left');
 const rightButton = document.querySelector('.scroll-button.right');
+const projectCard = document.querySelector('.project-card');
 
-const scrollAmount = window.innerWidth <= 768 ? window.innerWidth : 410;
+// Function to get the width of the project card
+const getScrollAmount = () => projectCard ? projectCard.offsetWidth : 0;
 
 // Function to update button visibility based on scroll position
 const updateButtonVisibility = () => {
@@ -49,25 +51,25 @@ const updateButtonVisibility = () => {
     }
 };
 
-// Attach click event listeners to buttons
+// Scroll the container based on button click
 leftButton.addEventListener('click', () => {
     scrollContainer.scrollBy({
-        left: -scrollAmount,
-        behavior: 'smooth',
+        left: -getScrollAmount(),
+        behavior: 'smooth'
     });
 });
 
 rightButton.addEventListener('click', () => {
     scrollContainer.scrollBy({
-        left: scrollAmount,
-        behavior: 'smooth',
+        left: getScrollAmount(),
+        behavior: 'smooth'
     });
 });
 
-// Attach scroll event listener to update button visibility
+// Call the updateButtonVisibility function when the page loads and whenever the scroll position changes
 scrollContainer.addEventListener('scroll', updateButtonVisibility);
 
-// Initial update to set the correct visibility on page load
+// Initial call to update button visibility
 updateButtonVisibility();
 
 function copyToClipboard() {
