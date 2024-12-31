@@ -1,6 +1,11 @@
-﻿section {
+﻿/*section {*/
+/*    scroll-snap-align: start;*/
+/*    !*height: 100vh;*!*/
+/*}*/
+
+section {
+    /*height: clamp(80vh, 100dvh, 100vh); !* Flexible height *!*/
     scroll-snap-align: start;
-    height: 100vh;
 }
 
 /* Welcome Section - Background Image*/
