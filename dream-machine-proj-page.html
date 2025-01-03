@@ -39,15 +39,14 @@
                 <div class="content">
                     <h1>Dream Machine</h1>
                     <p class="info-text">
-                        Corporate Chaos is a couch PVP-style racing game where you assume the role of an employee in a new start-up company.
-                        However, as you and some of your friends quickly become bored, you decide that racing on engine-driven office chairs
-                        around the bustling environment would be a more enjoyable and productive activity than working alongside your less
-                        entertaining colleagues. Chaos is bound to ensue.
+                        Dream Machine was made by request of Steve van den Borne, a visual artist and building historian. It is a gamified visual experience
+                        set inside the dream of Steven. Get blown away by the realistic visuals and the dream like experiences. Discover hidden messages using your
+                        polaroid camera or capture your favorite moments.
                     </p>
                 </div>
                 <div class="video">
                     <iframe
-                            src="https://youtu.be/JLh5SmgR2a4?si=WEq-TyS0KlJY-h0l"
+                            src="https://www.youtube.com/embed/JLh5SmgR2a4?si=QD0BKArhuLUF9kmv"
                             title="Dream Machine Trailer"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
@@ -59,7 +58,56 @@
         <section id="project-about">
             <div class="container">
                 <h2>About Dream Machine</h2>
-
+                <p>
+                    <b>Dream Machine</b> takes place in the dream of our client Steven. It contains <b>5 scenes</b>, each with its own puzzle and own "dream
+                    scene" as reward to that puzzle. The game contains multiple <b>interactable objects</b>, each having <b>2 states</b>, their normal state
+                    and their trigger state. In every scene, one object is the trigger to start the scene; then this object does something different
+                    from normal, again contributing to the <b>dream experience</b>. The player also has a <b>polaroid camera</b> equipped. The player can use this to
+                    take pictures of anything, but when certain <b>distortion fields</b> are captured, the player will discover a <b>hidden riddle</b>, pointing to the
+                    trigger object. The game also gives the player the option to <b>store the pictures</b> in their local Pictures folder.
+                    <br>
+                    Our client aims to present this visual experience at <b>art galleries</b>, where everyone interested can try. We kept this in mind, of course,
+                    and adapted our game to this target audience, making the game more <b>accessible</b> using a lot of <b>player feedback</b> and <b>simple controls</b>.
+                </p>
+                <h3>My Contribution</h3>
+                <p>
+                    The team consisted of <b>2 programmers</b>, which means I was active in multiple aspects of the game.
+                    <br>
+                    I implemented the <b>custom player movement</b>, the different <b>interactable objects</b>, the ability to <b>shrink in the maquette</b> (see the
+                    <a href="#project-gallery">gallery</a> below). All the <b>UI and HUD</b> were also implemented by me, including different <b>menus</b> (start, pause, settings, chapters, etc.)
+                    and in-game UI. Finally, I also implemented the <b>polaroid mechanic</b>, which takes pictures and reveals <b>hidden text</b> when looking at the correct area.
+                </p>
+                <h3>The Team</h3>
+                <p>
+                    As mentioned before, the team contained 2 programmers, me included. Next to that, there were also 2 artists involved and one game designer,
+                    who also helped with both programming and the creation of art assets. We also had the pleasure of working with a composer student which delivered
+                    custom music for the game.
+                </p>
+                <h4>Programming</h4>
+                <a href="https://www.linkedin.com/in/donan-camerlynck-b2ab4a2a5/" target="_blank">Donan Camerlynck</a><br>
+                <a href="https://www.linkedin.com/in/michiel-dewachtere-1960aa224/" target="_blank">Michiel Dewachtere</a> (me)
+                <h4>Art</h4>
+                <a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fla-ak%C3%A7ay-751065314/" target="_blank">Çağla Akçay</a><br>
+                <a href="https://www.linkedin.com/in/jpelakauskas/" target="_blank">Juozas Pelakauskas</a>
+                <h4>Design</h4>
+                <a href="https://www.linkedin.com/in/tom-vandenberghe-a8836b295/" target="_blank">Tom Vandenberghe</a> (also did a lot of art and programming)
+                <h4>Music</h4>
+                <a href="https://jancorbero.cat/en/" target="_blank">Jan Corberó</a>
+                <h3>Unreal Engine 5</h3>
+                <p>
+                    This was my first big project using Unreal Engine 5. As programmers, the game was fully made using C++, no to very
+                    little blueprints were used. It thought me a great deal, I was already quite proficient with modern C++ and working
+                    with the standard, which made it easy but still quite tricky to transfer to C++ in UE5. Unreal's lack of documentation
+                    didn't help transitioning either, I learned new things every day working on this project, and I can now say that I am
+                    somewhat comfortable writing UE5 C++.
+                </p>
+                <p>
+                    This was my <b>first big project</b> using <b>Unreal Engine 5</b>. As programmers, the game was built entirely in <b>C++</b>,
+                    with little to no use of Blueprints. It taught me a great deal. I was already quite proficient with modern C++ and
+                    familiar with the standard library, which made the transition to C++ in UE5 easier but still <b>challenging</b>.
+                    Unreal's limited documentation didn't make the transition any smoother. However, I learned <b>new things every day</b>
+                    while working on this project, and I can now confidently say that I am <b>comfortable</b> writing C++ in Unreal Engine 5.
+                </p>
             </div>
         </section>
 
@@ -68,9 +116,111 @@
                 <ul>
                     <li>
                         <div class="image">
-                            <img src="" alt="Project 1 Image">
+                            <img src="data/pictures/dream_machine/room.png" alt="Project 1 Image">
                         </div>
                         <div class="text">
+                            <h4>The room</h4>
+                            <p>
+                                This is the room where the game takes place. The player will re-enter this room through
+                                the maquette, creating the illusion of a loop.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/pictures/dream_machine/polaroid.gif" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Polaroid in action</h4>
+                            <p>
+                                The player is taking a picture, after the polaroid moves away and prints it.
+                                The player can then take a better look at it and is able to frame the picture.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/pictures/dream_machine/corridor.png" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>The corridor</h4>
+                            <p>
+                                The player is spawned inside the corridor connected to the room. Here are all the
+                                pictures displayed the player took.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/pictures/dream_machine/distortion.png" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Distortion field</h4>
+                            <p>
+                                The distortion fields indicate that there is a hidden text there. A prompt shows
+                                up that tells the player to equip its polaroid camera. When taking a picture from
+                                the field, the hidden text reveals itself.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/pictures/dream_machine/maquette.gif" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>The maquette</h4>
+                            <p>
+                                The maquette is an exact replica of the room, when interacting with an object, that
+                                object will also be interacted with inside the maquette. When a scene is done playing,
+                                the door of the maquette opens, giving the player the option to go inside.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/pictures/dream_machine/shrinking.gif" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Shrinking into maquette</h4>
+                            <p>
+                                Once a scene is finished playing, the door of the maquette opens. When walking towards
+                                the open door, the player starts to shrink. Once entered the maquette, the player can
+                                look again for the trigger object, advancing to the next scene.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/pictures/dream_machine/trigger.gif" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Interacting with trigger object</h4>
+                            <p>
+                                When interacting with a trigger object, the object will do something out of the ordinary,
+                                after that, the scene will start playing.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/pictures/dream_machine/scene5.gif" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>One of the dream sequences</h4>
+                            <p>
+                                This is scene 5. When triggered, various statues push and breath through the wall.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image">
+                            <img src="data/pictures/dream_machine/menus.gif" alt="Project 1 Image">
+                        </div>
+                        <div class="text">
+                            <h4>Traversing menus</h4>
+                            <p>
+                                A demonstration of all the menus.
+                            </p>
                         </div>
                     </li>
                 </ul>
