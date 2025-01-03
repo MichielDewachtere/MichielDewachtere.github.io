@@ -8,11 +8,13 @@
 
 .project-overview, #project-overview {
     .container {
+
         display: flex;
         justify-content: center; /* Centers items horizontally */
         align-items: stretch;    /* Aligns items vertically */
         gap: 2rem;               /* Adjust spacing between items */
-        margin: 0 auto 2rem;     /* Ensures container itself is centered */
+
+        width: 95%;
     }
 
     .content {
@@ -44,9 +46,12 @@
     }
 
     .video {
+        align-self: center;
         position: relative;
         width: 100%;
-        max-width: 720px;
+        /*max-width: 720px;*/
+        min-width: 40%;
+        height: 100%;
         margin: 0 auto;
 
         iframe {
